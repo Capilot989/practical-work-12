@@ -1,0 +1,14 @@
+text=input('Введите текст')
+bracket=0
+flag=1
+for sym in text:
+    if sym=='(':
+        bracket+=1
+    if (sym==')' and bracket==0) or text.count('(')!=text.count(')'):
+        flag=0
+    if sym==')' and bracket!=0:
+        bracket-=1
+if flag==1:
+    print('Скобки расставлены верно')
+else:
+    print('Скобки расставлены не верно')
