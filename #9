@@ -1,0 +1,6 @@
+text=input('Введите текст')
+text=text.split()
+for x in text:
+    if text.count(x)==2:
+        print(x)
+        break
