@@ -1,0 +1,18 @@
+text=input('Введите текст')
+count_space=[]
+cnt=0
+for letter in text:
+    if letter==' ':
+        cnt+=1
+    else:
+        count_space.append(cnt)
+        cnt=0
+print(max(count_space))
+
+text=input('Введите текст')
+count_same=[]
+for i in range(1,len(text)):
+    for letter in text:
+        if letter*i in text:
+            count_same.append(i)
+print(max(count_same))
