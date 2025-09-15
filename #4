@@ -1,0 +1,8 @@
+text=input('Введите текст')
+count_sym=[]
+for letter in text:
+    count_sym.append([text.count(letter), letter])
+for el in count_sym:
+    if el[0]==3:
+        print(el[1])
+        break
