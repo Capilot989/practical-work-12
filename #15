@@ -1,0 +1,25 @@
+def number_check(x, y):
+    bulls=0
+    cows=0
+    for numb in x:
+        if numb in y and x.find(numb)==y.find(numb):
+            bulls+=1
+        if numb in y and x.find(numb)!=y.find(numb):
+            cows+=1
+    return f'Быков: {bulls}, Коров: {cows}'
+number=input('Введите загаданное число')
+print('\n'*25)
+tries=0
+flag=1
+bulls=0
+cows=0
+while tries<=10 and flag==1:
+    guess = input()
+    tries+=1
+    if guess == number:
+        print('Победа!')
+        flag=0
+    else:
+        print(number_check(guess, number))
+if flag==1:
+    print('Поражение, попытки кончились(')
