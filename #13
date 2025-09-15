@@ -1,0 +1,17 @@
+def sum(s):
+    cnt=0
+    for x in s:
+        cnt+=int(x)
+    return cnt
+def lucky_ticket(s):
+    if len(s)%2==0 and sum(s[:len(s)//2])==sum(s[len(s)//2]):
+        return 1
+    return 0
+flag=1
+numb=0
+while flag==1:
+    tickets=input()
+    numb+=1
+    if lucky_ticket(tickets)==1:
+        flag=0
+print(numb)
