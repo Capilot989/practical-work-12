@@ -1,0 +1,6 @@
+text=input('Введите текст')
+text=text.split()
+lentext=[[len(x),x] for x in text]
+lentext.sort()
+answer=[x[1] for x in lentext]
+print(answer)
