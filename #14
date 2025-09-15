@@ -1,0 +1,24 @@
+clue=input('Введите подсказку')
+word=input('Введите загаданное слово')
+print('\n'*25)
+unk='*'*len(word)
+print(clue,f'\n{unk}')
+tries=0
+flag=1
+while tries<=10 and flag==1:
+    chose=int(input('Буква или слово (0 - буква, 1 - слово)?'))
+    tries+=1
+    guess = input()
+    if chose == 1 and guess == word:
+        print('Победа!')
+        flag=0
+    if chose == 0 and guess in word:
+        unk='*'*word.find(guess)+guess+'*'*(len(word)-1-word.find(guess))
+        print(unk)
+    if chose == 0 and guess not in word:
+        print(unk)
+    if '*' not in unk:
+        print('Победа')
+        flag=0
+if flag==1:
+    print('Поражение')
