@@ -1,0 +1,14 @@
+txt1=input('Введите текст')
+txt2=input('Введите текст')
+txt3=input('Введите текст')
+unical=[]
+for letter in txt1:
+    if letter not in txt2 and letter not in txt3:
+        unical.append(letter)
+for letter in txt2:
+    if letter not in txt1 and letter not in txt3:
+        unical.append(letter)
+for letter in txt3:
+    if letter not in txt2 and letter not in txt1:
+        unical.append(letter)
+print(set(unical))
