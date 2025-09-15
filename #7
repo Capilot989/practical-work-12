@@ -1,0 +1,4 @@
+text=input('Введите текст')
+text=text.split()
+lentext=[len(x) for x in text]
+print(min(lentext))
