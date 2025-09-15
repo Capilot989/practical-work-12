@@ -1,0 +1,10 @@
+game=input('Начинайте играть')
+text=game.split()
+player_name=['Петя', 'Вася']
+flag=1
+for i in range(1, len(text)):
+    if text[i][0] != text[i-1][-1] and flag==1:
+        print(f'Победил {player_name[(i-1)%2]}')
+        flag=0
+if flag==1:
+    print(f'Победил {player_name[len(text)%2==0]}')
