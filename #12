@@ -1,0 +1,15 @@
+import string as st
+import keyword as key
+name=input('Введите имя')
+flag=1
+symbols=st.ascii_letters+st.digits+'_'
+if key.iskeyword(name)==0 and name[0] not in st.digits:
+    for letter in name:
+        if letter not in symbols:
+            flag=0
+else:
+    flag=0
+if flag==1:
+    print('Данное имя подходит')
+else:
+    print('Данное имя не подходит')
